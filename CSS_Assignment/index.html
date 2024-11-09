@@ -1,670 +1,624 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>CSS Assignment</title>
+        <title>Panacloud Website</title>
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
-        <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel/slick/slick.css"/>
-        <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel/slick/slick-theme.css"/>
-        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
-        <link rel="stylesheet" href="index.css">       
-       <style>
-          a.custom-link {
-          text-decoration: none; /* Remove default underline */
-          color: black; /* Default link color */
-          border-bottom: 2px solid transparent; /* Invisible border initially */
-        }
-
-          a.custom-link:hover {
-          border-bottom: 2px solid orange; /* Orange underline on hover */
-        }
-        .btn-orange {
-          background-color: orange;
-          color: white;
-          border: none;
-          padding: 10px 20px;
-        }
-        .slider {
-            width: 100%;
-            margin: 0 auto;
-        }
-        .slider img {
-            width: 100%;
-            height: auto;
-        }
-        .round-div {
-            width: 100px;
-            height: 100px;
-            background-color: #007bff;
-            border-radius: 50%;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            color: white;
-            font-size: 30px;
-          }
-          .round-div {
-            width: 100px;
-            height: 100px;
-            border-radius: 50%;
-            overflow: hidden;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            background-color: #f0f0f0;
-          }
-
-          /* Image styling */
-          .round-div img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-          }
-
-          /* Heading and paragraph container inside each div */
-          .content {
-            text-align: center;
-            margin-top: 10px;
-          }
-
-          /* Top heading and paragraph */
-          .top-heading {
-            text-align: center;
-            margin-bottom: 20px;
-          }
-
-          /* Responsive paragraph */
-          .top-heading p {
-            max-width: 600px;
-            margin: 0 auto;
-          }
-          .image-container img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-          }
-          .content {
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-          }
-          .square-div {
-            background-color: #f0f0f0;
-            padding: 30px;
-            position: relative;
-            text-align: center;
-            border: 1px solid #ddd;
-            height: 250px; /* Fixed height to create squares */
-          }
-
-          /* Style for the round div */
-          .round-div {
-            width: 80px;
-            height: 80px;
-            border-radius: 50%;
-            background-color: #ff0000;
-            position: absolute;
-            top: -40px; /* Positioning it halfway on top of the square div */
-            left: 50%;
-            transform: translateX(-50%);
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            z-index: 1;
-          }
-
-          /* Style for the star inside the round div */
-          .round-div i {
-            color: white;
-            font-size: 24px;
-          }
-
-          /* Style for the heading and paragraph */
-          .square-div h5 {
-            margin-top: 50px; /* Space below the round div */
-          }
-
-          .read-more {
-            display: inline-block;
-            margin-top: 15px;
-            color: #007bff;
-            text-decoration: none;
-          }
-
-          .read-more:hover {
-            text-decoration: underline;
-          }
-          .main-heading {
-            text-align: center;
-            margin-bottom: 40px;
-          }
-
-          /* Style for each box container */
-          .box {
-            background-color: #f0f0f0;
-            padding: 30px;
-            border: 1px solid #ddd;
-            position: relative;
-            margin-bottom: 50px;
-            text-align: center;
-          }
-
-          /* The line connecting the divs */
-          .box:before {
-            content: "";
-            position: absolute;
-            width: 2px;
-            height: 100%;
-            background-color: #007bff;
-            top: 0;
-            left: 50%;
-            transform: translateX(-50%);
-            z-index: -1;
-          }
-
-          /* Remove the line from the first and last divs */
-          .box:first-child:before {
-            height: 50%;
-            top: 50%;
-          }
-          .box:last-child:before {
-            height: 50%;
-            bottom: 0;
-          }
-
-          /* Style for the round image div */
-          .circle {
-            width: 100px;
-            height: 100px;
-            border-radius: 50%;
-            background-color: #fff;
-            border: 3px solid #007bff;
-            position: absolute;
-            top: -50px;
-            left: 50%;
-            transform: translateX(-50%);
-            overflow: hidden;
-            z-index: 1;
-          }
-
-          /* Image inside the circle */
-          .circle img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-          }
-
-          /* Bottom heading and paragraph */
-          .box h5 {
-            margin-top: 60px;
-          }
-
-          /* Responsive adjustments */
-          @media (min-width: 768px) {
-            .row.line-connection {
-              justify-content: space-between;
-            }
-          }
-         
-        </style>
+        <link rel="stylesheet" href="index.css"> 
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">    
     </head>
     <body>
-      <div class="container-fluid px-0" style="color: white; background-color: black;">
-        <div class="row gx-0" style="color: white; background-color: black;">
-          <!-- First column for laptop, full width for mobile -->
-          <div class="col-md-6 col-12 d-flex justify-content-center align-items-center" style="padding: 5px;">
-              <div class="d-flex" style="padding: 5px;gap: 2px;">
-                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="gray" class="bi bi-facebook" viewBox="0 0 16 16">
-                    <path d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951"/>
-                </svg>
-                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="gray" class="bi bi-instagram" viewBox="0 0 16 16">
-                    <path d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.9 3.9 0 0 0-1.417.923A3.9 3.9 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.9 3.9 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.9 3.9 0 0 0-.923-1.417A3.9 3.9 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599s.453.546.598.92c.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.5 2.5 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.5 2.5 0 0 1-.92-.598 2.5 2.5 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233s.008-2.388.046-3.231c.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92s.546-.453.92-.598c.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92m-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217m0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334"/>
-                </svg>
-                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="gray" class="bi bi-google" viewBox="0 0 16 16">
-                    <path d="M15.545 6.558a9.4 9.4 0 0 1 .139 1.626c0 2.434-.87 4.492-2.384 5.885h.002C11.978 15.292 10.158 16 8 16A8 8 0 1 1 8 0a7.7 7.7 0 0 1 5.352 2.082l-2.284 2.284A4.35 4.35 0 0 0 8 3.166c-2.087 0-3.86 1.408-4.492 3.304a4.8 4.8 0 0 0 0 3.063h.003c.635 1.893 2.405 3.301 4.492 3.301 1.078 0 2.004-.276 2.722-.764h-.003a3.7 3.7 0 0 0 1.599-2.431H8v-3.08z"/>
-                </svg>
-                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="gray" class="bi bi-twitter" viewBox="0 0 16 16">
-                    <path d="M5.026 15c6.038 0 9.341-5.003 9.341-9.334q.002-.211-.006-.422A6.7 6.7 0 0 0 16 3.542a6.7 6.7 0 0 1-1.889.518 3.3 3.3 0 0 0 1.447-1.817 6.5 6.5 0 0 1-2.087.793A3.286 3.286 0 0 0 7.875 6.03a9.32 9.32 0 0 1-6.767-3.429 3.29 3.29 0 0 0 1.018 4.382A3.3 3.3 0 0 1 .64 6.575v.045a3.29 3.29 0 0 0 2.632 3.218 3.2 3.2 0 0 1-.865.115 3 3 0 0 1-.614-.057 3.28 3.28 0 0 0 3.067 2.277A6.6 6.6 0 0 1 .78 13.58a6 6 0 0 1-.78-.045A9.34 9.34 0 0 0 5.026 15"/>
-                </svg>
-                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="gray" class="bi bi-trello" viewBox="0 0 16 16">
-                    <path d="M14.1 0H1.903C.852 0 .002.85 0 1.9v12.19A1.9 1.9 0 0 0 1.902 16h12.199A1.9 1.9 0 0 0 16 14.09V1.9A1.9 1.9 0 0 0 14.1 0M7 11.367a.636.636 0 0 1-.64.633H3.593a.633.633 0 0 1-.63-.633V3.583c0-.348.281-.631.63-.633h2.765c.35.002.632.284.633.633zm6.052-3.5a.633.633 0 0 1-.64.633h-2.78A.636.636 0 0 1 9 7.867V3.583a.636.636 0 0 1 .633-.633h2.778c.35.002.631.285.631.633z"/>
-                </svg>
-              </div>
-          </div>
-          <!-- Second column for laptop, full width for mobile -->
-          <div class="col-md-6 col-12 d-flex justify-content-center align-items-center" style="padding: 5px;">
-              <div class="d-flex" style="gap: 2px;padding: 1px;">
-                <div style="color:white;padding: 5px;"><span><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="green" class="bi bi-telephone-fill" viewBox="0 0 16 16">
-                    <path fill-rule="evenodd" d="M1.885.511a1.745 1.745 0 0 1 2.61.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.68.68 0 0 0 .178.643l2.457 2.457a.68.68 0 0 0 .644.178l2.189-.547a1.75 1.75 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.6 18.6 0 0 1-7.01-4.42 18.6 18.6 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877z"/>
-                  </svg></span>+923197134823</div>
-                <div style="color: white;padding: 5px;"><span><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="green" class="bi bi-telephone-fill" viewBox="0 0 16 16">
-                    <path fill-rule="evenodd" d="M1.885.511a1.745 1.745 0 0 1 2.61.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.68.68 0 0 0 .178.643l2.457 2.457a.68.68 0 0 0 .644.178l2.189-.547a1.75 1.75 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.6 18.6 0 0 1-7.01-4.42 18.6 18.6 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877z"/>
-                  </svg></span>+923197134823</div>
-                  <div>
-                    <button  style="color: white;background-color: green;border: 1px solid black;">Call Us Now</button>
-                </div>        
-            </div>
-          </div>
+      <!--TOPNAVBAR-->
+      <div class="topNavbar">
+        <div style="display:flex;padding: 5px;gap: 10px;">
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="gray" class="bi bi-facebook" viewBox="0 0 16 16">
+              <path d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951"/>
+          </svg>
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="gray" class="bi bi-instagram" viewBox="0 0 16 16">
+              <path d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.9 3.9 0 0 0-1.417.923A3.9 3.9 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.9 3.9 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.9 3.9 0 0 0-.923-1.417A3.9 3.9 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599s.453.546.598.92c.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.5 2.5 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.5 2.5 0 0 1-.92-.598 2.5 2.5 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233s.008-2.388.046-3.231c.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92s.546-.453.92-.598c.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92m-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217m0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334"/>
+          </svg>
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="gray" class="bi bi-google" viewBox="0 0 16 16">
+              <path d="M15.545 6.558a9.4 9.4 0 0 1 .139 1.626c0 2.434-.87 4.492-2.384 5.885h.002C11.978 15.292 10.158 16 8 16A8 8 0 1 1 8 0a7.7 7.7 0 0 1 5.352 2.082l-2.284 2.284A4.35 4.35 0 0 0 8 3.166c-2.087 0-3.86 1.408-4.492 3.304a4.8 4.8 0 0 0 0 3.063h.003c.635 1.893 2.405 3.301 4.492 3.301 1.078 0 2.004-.276 2.722-.764h-.003a3.7 3.7 0 0 0 1.599-2.431H8v-3.08z"/>
+          </svg>
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="gray" class="bi bi-twitter" viewBox="0 0 16 16">
+              <path d="M5.026 15c6.038 0 9.341-5.003 9.341-9.334q.002-.211-.006-.422A6.7 6.7 0 0 0 16 3.542a6.7 6.7 0 0 1-1.889.518 3.3 3.3 0 0 0 1.447-1.817 6.5 6.5 0 0 1-2.087.793A3.286 3.286 0 0 0 7.875 6.03a9.32 9.32 0 0 1-6.767-3.429 3.29 3.29 0 0 0 1.018 4.382A3.3 3.3 0 0 1 .64 6.575v.045a3.29 3.29 0 0 0 2.632 3.218 3.2 3.2 0 0 1-.865.115 3 3 0 0 1-.614-.057 3.28 3.28 0 0 0 3.067 2.277A6.6 6.6 0 0 1 .78 13.58a6 6 0 0 1-.78-.045A9.34 9.34 0 0 0 5.026 15"/>
+          </svg>
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="gray" class="bi bi-trello" viewBox="0 0 16 16">
+              <path d="M14.1 0H1.903C.852 0 .002.85 0 1.9v12.19A1.9 1.9 0 0 0 1.902 16h12.199A1.9 1.9 0 0 0 16 14.09V1.9A1.9 1.9 0 0 0 14.1 0M7 11.367a.636.636 0 0 1-.64.633H3.593a.633.633 0 0 1-.63-.633V3.583c0-.348.281-.631.63-.633h2.765c.35.002.632.284.633.633zm6.052-3.5a.633.633 0 0 1-.64.633h-2.78A.636.636 0 0 1 9 7.867V3.583a.636.636 0 0 1 .633-.633h2.778c.35.002.631.285.631.633z"/>
+          </svg>
         </div>
-      </div>
-      <nav class="container-fluid px-0">
-        <div class="row gx-0">
-          <div class="col-12 col-md-2 d-flex justify-content-center justify-content-md-start align-items-center">
-            <img src="download.png" alt="Logo" class="img-fluid p-2" width="150" height="100">
-          </div>
-          <!-- Navbar Links -->
-          <div class="col-12 col-md-10">
-            <ul class="nav flex-column flex-md-row justify-content-md-end text-center text-md-start p-3 p-md-0">
-              <li class="nav-item">
-                <a class="nav-link text-dark custom-link"  href="#">WHY US</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link text-dark custom-link"  href="#">ABOUT</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link text-dark custom-link" href="#">PORTFOLIO</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link text-dark custom-link" href="#">PROCESS</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link text-dark custom-link" href="#">REVIEWS</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link text-dark custom-link" href="#">OUR SKILLS</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link text-dark custom-link" href="#">CONTACT US</a>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </nav>
-      <div class="slider">
-        <div><img src="images-2.jpeg" alt="Image 1"></div>
-        <div><img src="images.jpeg" alt="Image 2"></div>
-      </div>
-      <div class="container mt-5">
-        <!-- Top heading and paragraph -->
-        <div class="top-heading">
-          <h2>Main Heading</h2>
-          <p>This is a center-aligned paragraph that will be responsive and adjust based on the screen size. It looks great on both laptop and mobile devices.</p>
-        </div>
-      
-        <div class="row justify-content-center">
-          <!-- 5 divs in a row on laptops, 3 on top and 2 below on mobile -->
-          <div class="col-lg-2 col-4 mb-4 d-flex flex-column align-items-center">
-            <div class="round-div">
-              <img src="https://via.placeholder.com/100" alt="Image 1">
-            </div>
-            <div class="content">
-              <h5>Heading 1</h5>
-              <p>Paragraph text 1</p>
-            </div>
-          </div>
-          <div class="col-lg-2 col-4 mb-4 d-flex flex-column align-items-center">
-            <div class="round-div">
-              <img src="https://via.placeholder.com/100" alt="Image 2">
-            </div>
-            <div class="content">
-              <h5>Heading 2</h5>
-              <p>Paragraph text 2</p>
-            </div>
-          </div>
-          <div class="col-lg-2 col-4 mb-4 d-flex flex-column align-items-center">
-            <div class="round-div">
-              <img src="https://via.placeholder.com/100" alt="Image 3">
-            </div>
-            <div class="content">
-              <h5>Heading 3</h5>
-              <p>Paragraph text 3</p>
-            </div>
-          </div>
-          <div class="col-lg-2 col-6 mb-4 d-flex flex-column align-items-center">
-            <div class="round-div">
-              <img src="https://via.placeholder.com/100" alt="Image 4">
-            </div>
-            <div class="content">
-              <h5>Heading 4</h5>
-              <p>Paragraph text 4</p>
-            </div>
-          </div>
-          <div class="col-lg-2 col-6 mb-4 d-flex flex-column align-items-center">
-            <div class="round-div">
-              <img src="https://via.placeholder.com/100" alt="Image 5">
-            </div>
-            <div class="content">
-              <h5>Heading 5</h5>
-              <p>Paragraph text 5</p>
-            </div>
-          </div>
-        </div>
-      </div>     
-      <div class="container mt-5">
-        <div class="row">
-          <!-- Paragraph and button on the left -->
-          <div class="col-md-6 content">
-            <div>
-              <h2>Heading Text</h2>
-              <p>This is a left-aligned paragraph that provides some details about the content. It stays on the left while the image stretches to fill the right side of the div.</p>
-            </div>
-            <div>
-              <a href="#" class="btn btn-primary">Click Me</a>
-            </div>
-          </div>
-          <!-- Image on the right, stretched to fit the margin -->
-          <div class="col-md-6 image-container">
-            <img src="https://via.placeholder.com/600x400" alt="Placeholder Image">
-          </div>
-        </div>
-      </div>
-      <div class="container mt-5">
-        <div class="row">
-          <!-- 4 divs in a row on laptop, 2 on top and 2 below on mobile -->
-          <div class="col-lg-3 col-md-6 mb-5">
-            <div class="square-div">
-              <!-- Round div containing the red star -->
-              <div class="round-div">
-                <i class="fas fa-star"></i>
+        <div style="display:flex;gap: 2px;padding: 10px;">
+          <div style="color:white;padding: 5px;"><span><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="green" class="bi bi-telephone-fill" viewBox="0 0 16 16">
+              <path fill-rule="evenodd" d="M1.885.511a1.745 1.745 0 0 1 2.61.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.68.68 0 0 0 .178.643l2.457 2.457a.68.68 0 0 0 .644.178l2.189-.547a1.75 1.75 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.6 18.6 0 0 1-7.01-4.42 18.6 18.6 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877z"/>
+            </svg></span>+923197134823</div>
+          <div style="color: white;padding: 5px;"><span><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="green" class="bi bi-telephone-fill" viewBox="0 0 16 16">
+              <path fill-rule="evenodd" d="M1.885.511a1.745 1.745 0 0 1 2.61.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.68.68 0 0 0 .178.643l2.457 2.457a.68.68 0 0 0 .644.178l2.189-.547a1.75 1.75 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.6 18.6 0 0 1-7.01-4.42 18.6 18.6 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877z"/>
+            </svg></span>+923197134823</div>
+            <div style="padding: 5px;">
+              <button  style="color: white;background-color: green;border: 1px solid black;">Call Us Now</button>
+          </div>        
+      </div>   
+    </div>
+      <!--NAVBAR-->
+        <nav class="navbar" style="background-color: white; color: black;">
+              <div class="navbar-logo">
+                <img src="download-removebg-preview.png" alt="Logo" class="img-fluid p-2" width="150" height="100">
               </div>
-              <!-- Heading and paragraph inside the square div -->
-              <h5>Heading 1</h5>
-              <p>This is a short description for div 1.</p>
-              <a href="#" class="read-more">Read More</a>
+              <!-- Navbar Links -->
+              <ul class="navbar-links">
+                  <li>
+                    <a class="nav-link text-dark custom-link"  href="#">WHY US</a>
+                  </li>
+                  <li>
+                    <a class="nav-link text-dark custom-link"  href="#">ABOUT</a>
+                  </li>
+                  <li>
+                    <a class="nav-link text-dark custom-link" href="#">PORTFOLIO</a>
+                  </li>
+                  <li>
+                    <a class="nav-link text-dark custom-link" href="#">PROCESS</a>
+                  </li>
+                  <li>
+                    <a class="nav-link text-dark custom-link" href="#">REVIEWS</a>
+                  </li>
+                  <li>
+                    <a class="nav-link text-dark custom-link" href="#">OUR SKILLS</a>
+                  </li>
+                  <li>
+                    <a class="nav-link text-dark custom-link" href="#">CONTACT US</a>
+                  </li>
+                </ul>
+            <button class="navbar-toggle" id="navbar-toggle">&#9776;</button>       
+              </nav>
+              <!--SLIDER-->
+        <div class="slider">
+          <div class="inside_slider">
+            <div style="background-color: #8db73d;">
+            <center><h1>WE ARE EXPERT</h1></center>
             </div>
-          </div>
-          <div class="col-lg-3 col-md-6 mb-5">
-            <div class="square-div">
-              <div class="round-div">
-                <i class="fas fa-star"></i>
-              </div>
-              <h5>Heading 2</h5>
-              <p>This is a short description for div 2.</p>
-              <a href="#" class="read-more">Read More</a>
-            </div>
-          </div>
-      
-          <div class="col-lg-3 col-md-6 mb-5">
-            <div class="square-div">
-              <div class="round-div">
-                <i class="fas fa-star"></i>
-              </div>
-              <h5>Heading 3</h5>
-              <p>This is a short description for div 3.</p>
-              <a href="#" class="read-more">Read More</a>
-            </div>
-          </div>
-      
-          <div class="col-lg-3 col-md-6 mb-5">
-            <div class="square-div">
-              <div class="round-div">
-                <i class="fas fa-star"></i>
-              </div>
-              <h5>Heading 4</h5>
-              <p>This is a short description for div 4.</p>
-              <a href="#" class="read-more">Read More</a>
-            </div>
-          </div>
-        </div>
-      </div>
-      <!---Protfolio remaining-->
-      <div class="container mt-5">
-        <!-- Main heading and paragraph -->
-        <div class="main-heading">
-          <h2>Main Heading</h2>
-          <p>This is a center-aligned paragraph that introduces the connected boxes below.</p>
-        </div>
-      
-        <!-- 6 connected boxes with lines and circle divs on top -->
-        <div class="row line-connection">
-          <div class="col-lg-4 col-md-6 mb-5">
-            <div class="box">
-              <!-- Circle div with image inside -->
-              <div class="circle">
-                <img src="https://via.placeholder.com/100" alt="Image 1">
-              </div>
-              <!-- Heading and paragraph -->
-              <h5>Heading 1</h5>
-              <p>Short description for the first box.</p>
-            </div>
-          </div>
-      
-          <div class="col-lg-4 col-md-6 mb-5">
-            <div class="box">
-              <div class="circle">
-                <img src="https://via.placeholder.com/100" alt="Image 2">
-              </div>
-              <h5>Heading 2</h5>
-              <p>Short description for the second box.</p>
-            </div>
-          </div>
-      
-          <div class="col-lg-4 col-md-6 mb-5">
-            <div class="box">
-              <div class="circle">
-                <img src="https://via.placeholder.com/100" alt="Image 3">
-              </div>
-              <h5>Heading 3</h5>
-              <p>Short description for the third box.</p>
-            </div>
-          </div>
-      
-          <div class="col-lg-4 col-md-6 mb-5">
-            <div class="box">
-              <div class="circle">
-                <img src="https://via.placeholder.com/100" alt="Image 4">
-              </div>
-              <h5>Heading 4</h5>
-              <p>Short description for the fourth box.</p>
-            </div>
-          </div>
-      
-          <div class="col-lg-4 col-md-6 mb-5">
-            <div class="box">
-              <div class="circle">
-                <img src="https://via.placeholder.com/100" alt="Image 5">
-              </div>
-              <h5>Heading 5</h5>
-              <p>Short description for the fifth box.</p>
-            </div>
-          </div>
-      
-          <div class="col-lg-4 col-md-6 mb-5">
-            <div class="box">
-              <div class="circle">
-                <img src="https://via.placeholder.com/100" alt="Image 6">
-              </div>
-              <h5>Heading 6</h5>
-              <p>Short description for the sixth box.</p>
-            </div>
+            <center><p style="color: white;">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut tristique vulputate velit eu porttitor. Integer id massa ex. Mauris ullamcorper quam a elementum imperdiet. </p></center>
+            <center><button style="width: 200px;height: 50px;background-color: orange;color: black;">READ MORE</button></center>
           </div>
         </div> 
-      </div>
-      <div class="container text-center my-5">
-        <div class="row justify-content-center">
-          <!-- First Circular Progress Bar -->
-          <div class="col-6 col-md-3">
-            <div class="circle_box">
-            <div>
-            <svg> 
-              <circle cx="100" cy="100" r="95" /> 
-              <circle cx="100" cy="100" r="95" /> 
-          </svg> 
-          <span>90%</span> 
-          </div>
-          <strong>c++ developer</strong> 
-          </div>
-          </div>
-          <!-- Second Circular Progress Bar -->
-          <div class="col-6 col-md-3">
-            <div class="progress-circle" style="--progress: 0.60">
-              <span class="value">60%</span>
-            </div>
-            <p>Task 2</p>
-          </div>
-      
-          <!-- Third Circular Progress Bar -->
-          <div class="col-6 col-md-3">
-            <div class="progress-circle" style="--progress: 0.85">
-              <span class="value">85%</span>
-            </div>
-            <p>Task 3</p>
-          </div>
-      
-          <!-- Fourth Circular Progress Bar -->
-          <div class="col-6 col-md-3">
-            <div class="progress-circle" style="--progress: 0.45">
-              <span class="value">45%</span>
-            </div>
-            <p>Task 4</p>
-          </div>
-        </div>
-      </div>
-      <div class="container-fluid first-div" style="background-color: #8db73d;">
-        <div><h1 style="color: white;">START YOUR NEW PROJECT</h1></div>
-        <div class="container">
-          <div class="form-container">
-            <form>
-              <div class="row">
-                <!-- First input field -->
-                <div class="col-md-3 col-6 mb-3">
-                  <input type="text" class="form-control" placeholder="YOUR NAME">
-                </div>
-                <!-- Second input field -->
-                <div class="col-md-3 col-6 mb-3">
-                  <input type="text" class="form-control" placeholder="YOUR EMAIL">
-                </div>
-                <!-- Third input field -->
-                <div class="col-md-3 col-12 mb-3">
-                  <input type="text" class="form-control" placeholder="YOUR PHONE">
-                </div>
-                <!-- Button -->
-                <div class="col-md-3 col-12 mb-3">
-                  <button style="background-color: orange;" class="btn btn-primary w-100">Submit</button>
+        <!--OUR ADVANTAGES-->
+        <div class="advantage" style="padding: 50px;">
+            <center><h1>OUR<span style="color:#8db73d;">ADVANTAGES</span></h1></center>
+            <center><p style="color: white;">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut tristique vulputate velit eu porttitor. Integer id massa ex. Mauris ullamcorper quam a elementum imperdiet. </p></center>
+            <div class="row1">
+              <div class="advantage1" style="justify-items: center;">
+              <div class="icon_div">
+                <img src="bulb.png"/>
+              </div>
+                <div style="justify-items: center;">
+                  <h1 style="font-size: 15px;color: orange;font-weight: bold;">Innovation</h1>
+                  <p style="font-size: 8px;color: black;font-weight: bold;">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut tristique vulputate velit eu porttitor. Integer id massa ex. Mauris ullamcorper quam a elementum imperdiet. 
+                  </p>
                 </div>
               </div>
-            </form>
+              <div class="advantage1" style="justify-items: center;">
+                <div class="icon_div">
+                  <img src="bulb.png"/>
+                </div>
+                  <div style="justify-items: center;">
+                    <h1 style="font-size: 15px;color: orange;font-weight: bold;">Innovation</h1>
+                    <p style="font-size: 8px;color: black;font-weight: bold;">
+                      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut tristique vulputate velit eu porttitor. Integer id massa ex. Mauris ullamcorper quam a elementum imperdiet. 
+                    </p>
+                  </div>
+                </div>
+                <div class="advantage1" style="justify-items: center;">
+                  <div class="icon_div">
+                    <img src="bulb.png"/>
+                  </div>
+                    <div style="justify-items: center;">
+                      <h1 style="font-size: 15px;color: orange;font-weight: bold;">Innovation</h1>
+                      <p style="font-size: 8px;color: black;font-weight: bold;">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut tristique vulputate velit eu porttitor. Integer id massa ex. Mauris ullamcorper quam a elementum imperdiet. 
+                      </p>
+                    </div>
+                  </div>
+                  <div class="advantage1" style="justify-items: center;">
+                    <div class="icon_div">
+                      <img src="bulb.png"/>
+                    </div>
+                      <div style="justify-items: center;">
+                        <h1 style="font-size: 15px;color: orange;font-weight: bold;">Innovation</h1>
+                        <p style="font-size: 8px;color: black;font-weight: bold;">
+                          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut tristique vulputate velit eu porttitor. Integer id massa ex. Mauris ullamcorper quam a elementum imperdiet. 
+                        </p>
+                      </div>
+                    </div>
+                    <div class="advantage1" style="justify-items: center;">
+                      <div class="icon_div">
+                        <img src="bulb.png"/>
+                      </div>
+                        <div style="justify-items: center;">
+                          <h1 style="font-size: 15px;color: orange;font-weight: bold;">Innovation</h1>
+                          <p style="font-size: 8px;color: black;font-weight: bold;">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut tristique vulputate velit eu porttitor. Integer id massa ex. Mauris ullamcorper quam a elementum imperdiet. 
+                          </p>
+                        </div>
+                      </div>    
+          </div>
+          </div>
+          </div>
+          <!--ABOUT US-->
+        <div class="aboutus" style="padding:50px;background-image: url('about.png');">
+          <center><h1>ABOUT<span style="color:#8db73d;">US</span></h1></center>
+          <div class="row" style="gap: 10px;background-image: url();">
+            <div>
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut tristique vulputate velit eu porttitor. Integer id massa ex. Mauris ullamcorper quam a elementum imperdiet. 
+              </p>
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut tristique vulputate velit eu porttitor. Integer id massa ex. Mauris ullamcorper quam a elementum imperdiet. 
+              </p>
+              
+              <button style="width: 200px;height: 50px;background-color: orange;" href="#" class="read-more">Read More</a>
+              </div>
+            </div>
+            
+        </div>
+        <!--SERVICES-->
+        <div class="services" style="padding: 50px;">
+            <center><h1>OUR<span style="color:#8db73d;">SERVICES</span></h1></center>
+            <center><p style="color: white;">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut tristique vulputate velit eu porttitor. Integer id massa ex. Mauris ullamcorper quam a elementum imperdiet. </p></center>
+            <div class="row" style="gap: 10px;">
+            <div class="col-lg-3 col-md-6 mb-5">
+              <div class="square-div">
+                <div class="round-div">
+                  <i class="fas fa-star" style="color: red;"></i>
+                </div>
+                <h5>Web Design</h5>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut tristique vulputate velit eu porttitor. Integer id massa ex. Mauris ullamcorper quam a elementum imperdiet. 
+                </p>  
+                <a style="color: green;" href="#" class="read-more">Read More</a>
+              </div>
+            </div>
+            <div class="col-lg-3 col-md-6 mb-5">
+              <div class="square-div">
+                <div class="round-div">
+                  <i class="fas fa-star" style="color: red;"></i>
+                </div>
+                <h5>Web Design</h5>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut tristique vulputate velit eu porttitor. Integer id massa ex. Mauris ullamcorper quam a elementum imperdiet. 
+                </p>  
+                <a style="color: green;" href="#" class="read-more">Read More</a>
+              </div>
+            </div>
+        
+            <div class="col-lg-3 col-md-6 mb-5">
+              <div class="square-div">
+                <div class="round-div">
+                  <i class="fas fa-star" style="color: red;"></i>
+                </div>
+                <h5>Web Design</h5>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut tristique vulputate velit eu porttitor. Integer id massa ex. Mauris ullamcorper quam a elementum imperdiet. 
+                </p>  
+                <a style="color: green;" href="#" class="read-more">Read More</a>
+              </div>
+            </div> 
+            <div class="col-lg-3 col-md-6 mb-5">
+              <div class="square-div">
+                <div class="round-div">
+                  <i class="fas fa-star" style="color: red;"></i>
+                </div>
+                <h5>Web Design</h5>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut tristique vulputate velit eu porttitor. Integer id massa ex. Mauris ullamcorper quam a elementum imperdiet. 
+                </p>  
+                <a style="color: green;" href="#" class="read-more">Read More</a>
+              </div>
           </div>
         </div>
+        </div>
+        <!--PORTFOLIO-->
+        <div class="portfolio" style="background-color: black;">
+            <center><h1>OUR<span style="color:#8db73d;">PORTFOLIO</span></h1></center>
+            <center><p style="color: white;">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut tristique vulputate velit eu porttitor. Integer id massa ex. Mauris ullamcorper quam a elementum imperdiet. </p></center>
+            <div class="tab-buttons-container">
+            <div class="tab-buttons">
+              <button class="tab-button" onclick="showTab(0)">Web design</button>
+              <button class="tab-button" onclick="showTab(1)">Graphics</button>
+              <button class="tab-button" onclick="showTab(2)">Logo</button>
+              <button class="tab-button" onclick="showTab(3)">Branding</button>
+              <button class="tab-button" onclick="showTab(4)">Marketing</button>
+              <button class="tab-button" onclick="showTab(5)">Advertisement</button>
+            </div> 
+            </div>
+          <div class="tab-container">
+              <div class="tabcontent active" id="tab-0">
+                  <div class="images">
+                      <img src="lion.png" alt="Image 1">
+                      <img src="lion.png" alt="Image 2">
+                      <img src="lion.png" alt="Image 3">
+                      <img src="lion.png" alt="Image 4">
+                      <img src="lion.png" alt="Image 5">
+                      <img src="lion.png" alt="Image 1">
+                      <img src="lion.png" alt="Image 2">
+                      <img src="lion.png" alt="Image 3">
+                      <img src="lion.png" alt="Image 4">
+                      <img src="lion.png" alt="Image 5">
+                </div>
+                </div>
+              
+              <div class="tabcontent" id="tab-1">
+                <div class="images">
+                  <img src="lion.png" alt="Image 1">
+                  <img src="lion.png" alt="Image 2">
+                  <img src="lion.png" alt="Image 3">
+                  <img src="lion.png" alt="Image 4">
+                  <img src="lion.png" alt="Image 5">
+                  <img src="lion.png" alt="Image 1">
+                  <img src="lion.png" alt="Image 2">
+                  <img src="lion.png" alt="Image 3">
+                  <img src="lion.png" alt="Image 4">
+                  <img src="lion.png" alt="Image 5">
+            </div>
+              </div>
+              <div class="tabcontent" id="tab-3">
+                <div class="images">
+                  <img src="lion.png" alt="Image 1">
+                  <img src="lion.png" alt="Image 2">
+                  <img src="lion.png" alt="Image 3">
+                  <img src="lion.png" alt="Image 4">
+                  <img src="lion.png" alt="Image 5">
+                  <img src="lion.png" alt="Image 1">
+                  <img src="lion.png" alt="Image 2">
+                  <img src="lion.png" alt="Image 3">
+                  <img src="lion.png" alt="Image 4">
+                  <img src="lion.png" alt="Image 5">
+            </div>
+              </div>
+              <div class="tabcontent" id="tab-4">
+                <div class="images">
+                    <img src="lion.png" alt="Image 1">
+                    <img src="lion.png" alt="Image 2">
+                    <img src="lion.png" alt="Image 3">
+                    <img src="lion.png" alt="Image 4">
+                    <img src="lion.png" alt="Image 5">
+                    <img src="lion.png" alt="Image 1">
+                    <img src="lion.png" alt="Image 2">
+                    <img src="lion.png" alt="Image 3">
+                    <img src="lion.png" alt="Image 4">
+                    <img src="lion.png" alt="Image 5">
+              </div>
+              </div>
+            
+            <div class="tabcontent" id="tab-5">
+              <div class="images">
+                <img src="lion.png" alt="Image 1">
+                <img src="lion.png" alt="Image 2">
+                <img src="lion.png" alt="Image 3">
+                <img src="lion.png" alt="Image 4">
+                <img src="lion.png" alt="Image 5">
+                <img src="lion.png" alt="Image 1">
+                <img src="lion.png" alt="Image 2">
+                <img src="lion.png" alt="Image 3">
+                <img src="lion.png" alt="Image 4">
+                <img src="lion.png" alt="Image 5">
+          </div>
+            </div>
+            <div class="tabcontent" id="tab-6">
+              <div class="images">
+                <img src="lion.png" alt="Image 1">
+                <img src="lion.png" alt="Image 2">
+                <img src="lion.png" alt="Image 3">
+                <img src="lion.png" alt="Image 4">
+                <img src="lion.png" alt="Image 5">
+                <img src="lion.png" alt="Image 1">
+                <img src="lion.png" alt="Image 2">
+                <img src="lion.png" alt="Image 3">
+                <img src="lion.png" alt="Image 4">
+                <img src="lion.png" alt="Image 5">
+          </div>
+            </div>
+          </div>
+          </div>
+        <!--PROCESS-->
         <div>
-          <p style="color: white;">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut tristique vulputate velit eu porttitor. Integer id massa ex. Mauris ullamcorper quam a elementum imperdiet. </p>
+        <div>
+        <center><h1>OUR<span style="color:#8db73d;">PROCESS</span></h1></center>
+        <center><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut tristique vulputate velit eu porttitor. Integer id massa ex. Mauris ullamcorper quam a elementum imperdiet. </p>
+        </center>
         </div>
-      </div>
-      <div class="container-fluid first-div">
-        <h1>OUR <span style="color:#8db73d;">CONTACTS</span></h1>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut tristique vulputate velit eu porttitor. Integer id massa ex. Mauris ullamcorper quam a elementum imperdiet. </p>
-        <h5 class="fw-medium">
-          <span><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="green" class="bi bi-geo-alt-fill" viewBox="0 0 16 16">
-            <path d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10m0-7a3 3 0 1 1 0-6 3 3 0 0 1 0 6"/>
-          </svg></span>Lorem ipsum dolor sit amet, consectetur adipiscing elit.  
-        </h5>
-        <div class="contact-info" style="gap: 10px;">
-          <p><span><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="green" class="bi bi-telephone-fill" viewBox="0 0 16 16">
-            <path fill-rule="evenodd" d="M1.885.511a1.745 1.745 0 0 1 2.61.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.68.68 0 0 0 .178.643l2.457 2.457a.68.68 0 0 0 .644.178l2.189-.547a1.75 1.75 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.6 18.6 0 0 1-7.01-4.42 18.6 18.6 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877z"/>
-          </svg></span>(+92)319-7134823</p>
-          <p><span><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="green" class="bi bi-telephone-fill" viewBox="0 0 16 16">
-            <path fill-rule="evenodd" d="M1.885.511a1.745 1.745 0 0 1 2.61.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.68.68 0 0 0 .178.643l2.457 2.457a.68.68 0 0 0 .644.178l2.189-.547a1.75 1.75 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.6 18.6 0 0 1-7.01-4.42 18.6 18.6 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877z"/>
-          </svg></span>(+92)319-7134823</p>
-          <p><span><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="green" class="bi bi-envelope" viewBox="0 0 16 16">
-            <path d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2zm2-1a1 1 0 0 0-1 1v.217l7 4.2 7-4.2V4a1 1 0 0 0-1-1zm13 2.383-4.708 2.825L15 11.105zm-.034 6.876-5.64-3.471L8 9.583l-1.326-.795-5.64 3.47A1 1 0 0 0 2 13h12a1 1 0 0 0 .966-.741M1 11.105l4.708-2.897L1 5.383z"/>
-          </svg></span>info@panacloud.com</p>
+        <div class="p1" style="padding: 25px;">
+        <div class="process" style="padding: 50px;">
+            <div class="box">
+              <div class="round-div">1</div>
+              <img src="message.png" width="100" height="100"/>
+            </div>
+            <div class="line"></div>
+            <div class="box">
+              <div class="round-div">2</div>
+              <img src="message.png" width="100" height="100"/>
+            </div>
+            <div class="line"></div>
+            <div class="box">
+              <div class="round-div">3</div>
+              <img src="message.png" width="100" height="100"/>
+            </div>
+            <div class="line"></div>
+            <div class="box">
+              <div class="round-div">4</div>
+              <img src="message.png" width="100" height="100"/>
+            </div>
+            <div class="line"></div>
+            <div class="box">
+              <div class="round-div">5</div>
+              <img src="message.png" width="100" height="100"/>
+            </div>
+            <div class="line"></div>
+            <div class="box">
+              <div class="round-div">6</div>
+              <img src="message.png" width="100" height="100"/>
+            </div>
+          </div>
+        <div class="process" style="padding-left: 50px;padding-right: 50px;padding-bottom: 5px;">
+            <div class="box1">
+              <h1 style="font-size: 15px;color: orange;font-weight: bold;">Innovation</h1>
+              <br/>
+              <p style="font-size: 8px;color: black;font-weight: bold;">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut tristique vulputate velit eu porttitor. Integer id massa ex. Mauris ullamcorper quam a elementum imperdiet. 
+              </p>
+            </div>
+            <div class="line1"></div>
+            <div class="box1">
+              <h1 style="font-size: 15px;color: orange;font-weight: bold;">Innovation</h1>
+              <br/>
+              <p style="font-size: 8px;color: black;font-weight: bold;">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut tristique vulputate velit eu porttitor. Integer id massa ex. Mauris ullamcorper quam a elementum imperdiet. 
+              </p>
+            </div>
+            <div class="line1"></div>
+            <div class="box1">
+              <h1 style="font-size: 15px;color: orange;font-weight: bold;">Innovation</h1>
+              <br/>
+              <p style="font-size: 8px;color: black;font-weight: bold;">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut tristique vulputate velit eu porttitor. Integer id massa ex. Mauris ullamcorper quam a elementum imperdiet. 
+              </p>
+            </div>
+            <div class="line1"></div>
+            <div class="box1">
+              <h1 style="font-size: 15px;color: orange;font-weight: bold;">Innovation</h1>
+              <br/>
+              <p style="font-size: 8px;color: black;font-weight: bold;">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut tristique vulputate velit eu porttitor. Integer id massa ex. Mauris ullamcorper quam a elementum imperdiet. 
+              </p>
+            </div>
+            <div class="line1"></div>
+            <div class="box1">
+              <h1 style="font-size: 15px;color: orange;font-weight: bold;">Innovation</h1>
+              <br/>
+              <p style="font-size: 8px;color: black;font-weight: bold;">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut tristique vulputate velit eu porttitor. Integer id massa ex. Mauris ullamcorper quam a elementum imperdiet. 
+              </p>
+            </div>
+            <div class="line1"></div>
+            <div class="box1">
+              <h1 style="font-size: 15px;color: orange;font-weight: bold;">Innovation</h1>
+              <br/>
+              <p style="font-size: 8px;color: black;font-weight: bold;">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut tristique vulputate velit eu porttitor. Integer id massa ex. Mauris ullamcorper quam a elementum imperdiet. 
+              </p>
+            </div>
+          </div>
+          </div>
+          </div>
+           <!--PEOPLE ABOUT US--> 
+        <div class="peopleaboutus" style="background-color: lightgray;padding: 50px;">
+          <center><h1>PEOPLE<span style="color:#8db73d;">ABOUT US</span></h1></center>
+          <center><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut tristique vulputate velit eu porttitor. Integer id massa ex. Mauris ullamcorper quam a elementum imperdiet. </p>
+          </center>
+          <div style="display: flex;">
+          <div class="peopleaboutus1" style="padding: 20px;">
+            <div class="peopleaboutus2" style="border-right: 2px solid white;border-bottom: 2px solid white;">
+              <div class="box2" style="display: flex;gap: 10px;padding: 10px;">
+                <div class="circle1" style="padding: 5px;"><svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="gray" class="bi bi-person" viewBox="0 0 16 16">
+                  <path d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6m2-3a2 2 0 1 1-4 0 2 2 0 0 1 4 0m4 8c0 1-1 1-1 1H3s-1 0-1-1 1-4 6-4 6 3 6 4m-1-.004c-.001-.246-.154-.986-.832-1.664C11.516 10.68 10.289 10 8 10s-3.516.68-4.168 1.332c-.678.678-.83 1.418-.832 1.664z"/>
+                </svg></div> 
+                <div style="justify-items: left;">
+                  <h5>John Doe</h5>
+                  <p style="text-align: left;font-size: 12px;">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut tristique vulputate velit eu porttitor. Integer id massa ex. Mauris ullamcorper quam a elementum imperdiet. </p>
+                  </div>
+              </div>
+  
+            </div>
+            <div class="peopleaboutus3" style="border-left: 2px solid white;border-top: 2px solid white;">
+              <div class="box2" style="display: flex;gap: 10px;padding: 10px;">
+                <div class="circle1" style="padding: 5px;"><svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="gray" class="bi bi-person" viewBox="0 0 16 16">
+                  <path d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6m2-3a2 2 0 1 1-4 0 2 2 0 0 1 4 0m4 8c0 1-1 1-1 1H3s-1 0-1-1 1-4 6-4 6 3 6 4m-1-.004c-.001-.246-.154-.986-.832-1.664C11.516 10.68 10.289 10 8 10s-3.516.68-4.168 1.332c-.678.678-.83 1.418-.832 1.664z"/>
+                </svg></div> 
+                <div style="justify-items: left;">
+                  <h5>John Doe</h5>
+                  <p style="text-align: left;font-size: 12px;">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut tristique vulputate velit eu porttitor. Integer id massa ex. Mauris ullamcorper quam a elementum imperdiet. </p>
+                  </div>
+              </div>  
+            </div>
+          </div>
+          <div class="peopleaboutus1">
+            <div class="peopleaboutus2" style="border-top: 2px solid white;border-bottom: 2px solid white;">
+              <div class="box2" style="display: flex;gap: 10px;padding: 10px;">
+                <div class="circle1" style="padding: 5px;"><svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="gray" class="bi bi-person" viewBox="0 0 16 16">
+                  <path d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6m2-3a2 2 0 1 1-4 0 2 2 0 0 1 4 0m4 8c0 1-1 1-1 1H3s-1 0-1-1 1-4 6-4 6 3 6 4m-1-.004c-.001-.246-.154-.986-.832-1.664C11.516 10.68 10.289 10 8 10s-3.516.68-4.168 1.332c-.678.678-.83 1.418-.832 1.664z"/>
+                </svg></div> 
+                <div style="justify-items: left;">
+                  <h5>John Doe</h5>
+                  <p style="text-align: left;font-size: 12px;">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut tristique vulputate velit eu porttitor. Integer id massa ex. Mauris ullamcorper quam a elementum imperdiet. </p>
+                  </div>
+              </div>
+  
+            </div>
+            <div class="peopleaboutus3" style="border-top: 2px solid white;border-bottom: 2px solid white;">
+              <div class="box2" style="display: flex;gap: 10px;">
+                <div class="circle1" style="padding: 20px;"><svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="gray" class="bi bi-person" viewBox="0 0 16 16">
+                  <path d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6m2-3a2 2 0 1 1-4 0 2 2 0 0 1 4 0m4 8c0 1-1 1-1 1H3s-1 0-1-1 1-4 6-4 6 3 6 4m-1-.004c-.001-.246-.154-.986-.832-1.664C11.516 10.68 10.289 10 8 10s-3.516.68-4.168 1.332c-.678.678-.83 1.418-.832 1.664z"/>
+                </svg></div> 
+                <div style="justify-items: left;">
+                  <h5>John Doe</h5>
+                  <p style="text-align: left;font-size: 12px;">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut tristique vulputate velit eu porttitor. Integer id massa ex. Mauris ullamcorper quam a elementum imperdiet. </p>
+                  </div>
+              </div>  
+            </div>
+          </div>
         </div>
-      </div>
-      <!-- Second Div -->
-      <div class="container-fluid second-div">
-      <img src="contactus.png" width="100%" height="500px"/>
-      </div>
-      <footer class="footer p-1">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-3">
-                    <img src="download.png" width="150" height="50"/>
-                    <br/>
-                    <p style="color: white;">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras scelerisque ultrices 
-                      <br/>nulla, ornare sodales quam. Praesent ultricies eget turpis eget mollis. Donec elementum, nisi non auctor iaculis, turpis ligula malesuada est,</p>
-                    <br/>
-                    <p style="color: white;">@panacloud 2019</p>
+        </div>
+        <!--OUR SKILLS-->
+        <div class="ourskill">
+            <div class="first-div">
+                <center><h1>OUR <span style="color:#8db73d;">SKILLS</span></h1></center>
+                <center><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut tristique vulputate velit eu porttitor. Integer id massa ex. Mauris ullamcorper quam a elementum imperdiet. </p>
+                </center>
+              <div class="container">
+                <div class="row" style="margin: 80px;">
+                  <div class="col-lg-3 col-md-6 col-sm-12 mb-4">
+                    <div role="progressbar"  aria-valuenow="45" aria-valuemin="0" aria-valuemax="100" style="--value:45;--fg:#FFBF00"></div>
+                  </div>
+                  <div class="col-lg-3 col-md-6 col-sm-12 mb-4">
+                    <div role="progressbar"  aria-valuenow="45" aria-valuemin="0" aria-valuemax="100" style="--value:60;--fg:#FF0000"></div>
+                  </div>
+                  <div class="col-lg-3 col-md-6 col-sm-12 mb-4">
+                    <div role="progressbar"  aria-valuenow="45" aria-valuemin="0" aria-valuemax="100" style="--value:75;--fg:#8db73d"></div>
+                  </div>
+                  <div class="col-lg-3 col-md-6 col-sm-12 mb-4">
+                    <div role="progressbar"  aria-valuenow="45" aria-valuemin="0" aria-valuemax="100" style="--value:80;--fg:#000000"></div>
+                  </div>
                 </div>
-                <div class="col-md-3" style="color: white;">
-                    <h5>SERVICES</h5>
-                    <ul class="list-unstyled">
-                      <li>Web Development</li>
-                      <li>Digital Marketing</li>
-                      <li>Graphic Design</li>
-                      <li>Branding</li>
-                      <li>Web Development</li>
-                      <li>Digital Marketing</li>
-                      <li>Graphic Design</li>
-                      <li>Branding</li>
-                      <li>Branding</li>
-                    </ul>
+              </div>
+              </div>
+        </div>
+        <!--OUR PACKAGES --- pending-->
+        <div class="pricing" style="background-image: url('Packages.PNG');width: 100%;height: 200px;">
+          cc
+        </div>
+        <!--OUR start new project-->
+        <div class="startnewproject" style="background-color: #8db73d;">
+                <div class="contactus"><h1 style="color: white;">START YOUR NEW PROJECT</h1></div>
+                  <div class="contactus">
+                    <form>
+                      <div class="row">
+                        <div class="col-md-3 col-6 mb-3">
+                          <input type="text" class="form-control" style="width: 90%;padding: 5px;gap: 2px;" placeholder="YOUR NAME">
+                        </div>
+                        <div class="col-md-3 col-6 mb-3">
+                          <input type="text" class="form-control" style="width: 90%;padding: 5px;gap: 2px;" placeholder="YOUR EMAIL">
+                        </div>
+                        <div class="col-md-3 col-12 mb-3">
+                          <input type="text" class="form-control" style="width: 90%;padding: 5px;gap: 2px;" placeholder="YOUR PHONE">
+                        </div>
+                        <div class="col-md-3 col-12 mb-3">
+                          <button style="background-color: orange;width: 90%;padding: 5px;gap: 2px;" class="h-100 w-100" >Submit</button>
+                        </div>
+                      </div>
+                    </form>
                 </div>
-                <div class="col-md-3" style="color: white;">
-                    <h5>USEFUL LINKS</h5>
-                    <ul class="list-unstyled">
+                <div class="contactus">
+                  <p style="color: white;">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut tristique vulputate velit eu porttitor. Integer id massa ex. Mauris ullamcorper quam a elementum imperdiet. </p>
+                </div> 
+                </div> 
+        </div>
+        <!--contactus -->
+        <div class="contactus">
+            <div class="heading">
+            <center><h1>OUR <span style="color:#8db73d;">CONTACTS</span></h1></center>
+            <center><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut tristique vulputate velit eu porttitor. Integer id massa ex. Mauris ullamcorper quam a elementum imperdiet. </p>
+            </center>
+            <center><h5 class="fw-medium">
+              <span><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="#8db73d" class="bi bi-geo-alt-fill" viewBox="0 0 16 16">
+                <path d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10m0-7a3 3 0 1 1 0-6 3 3 0 0 1 0 6"/>
+              </svg></span>Lorem ipsum dolor sit amet, consectetur adipiscing elit.  
+            </h5> 
+            </center>
+            <center><div  style="gap: 10px;display: flex;padding-left: 100px;">
+                <p class="fw-medium"><span><svg style="transform:scaleX(-1)" xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="#8db73d" class="bi bi-telephone-fill" viewBox="0 0 16 16">
+                  <path fill-rule="evenodd" d="M1.885.511a1.745 1.745 0 0 1 2.61.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.68.68 0 0 0 .178.643l2.457 2.457a.68.68 0 0 0 .644.178l2.189-.547a1.75 1.75 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.6 18.6 0 0 1-7.01-4.42 18.6 18.6 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877z"/>
+                </svg></span> (+92)319-7134823</p>
+                <p class="fw-medium"><span><svg style="transform: scaleX(-1);" xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="#8db73d" class="bi bi-telephone-fill" viewBox="0 0 16 16">
+                  <path fill-rule="evenodd" d="M1.885.511a1.745 1.745 0 0 1 2.61.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.68.68 0 0 0 .178.643l2.457 2.457a.68.68 0 0 0 .644.178l2.189-.547a1.75 1.75 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.6 18.6 0 0 1-7.01-4.42 18.6 18.6 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877z"/>
+                </svg></span> (+92)319-7134823</p>
+                <p class="fw-medium"><span><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="#8db73d" class="bi bi-envelope" viewBox="0 0 16 16">
+                  <path d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2zm2-1a1 1 0 0 0-1 1v.217l7 4.2 7-4.2V4a1 1 0 0 0-1-1zm13 2.383-4.708 2.825L15 11.105zm-.034 6.876-5.64-3.471L8 9.583l-1.326-.795-5.64 3.47A1 1 0 0 0 2 13h12a1 1 0 0 0 .966-.741M1 11.105l4.708-2.897L1 5.383z"/>
+                </svg></span> info@panacloud.com</p>
+              </div>
+              </center>
+            </div>
+            </div>
+            <!-- Contact Us google map Div -->
+            <div class="container-fluid second-div">
+            <img src="contactus.png" width="100%" height="500px"/>
+            </div> 
+        </div>
+        <!--footer -->
+        <div class="footer">
+            <div>
+                <img src="download-removebg-preview.png" width="150" height="50"/>
+                <br/>
+                <p style="color: white;">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras scelerisque ultrices 
+                  <br/>nulla, ornare sodales quam. Praesent ultricies eget turpis eget mollis. Donec elementum, nisi non auctor iaculis, turpis ligula malesuada est,</p>
+                <br/>
+                <p style="color: white;">@panacloud 2019</p>
+           </div>
+            <div>
+                <h5 style="color: white;">SERVICES</h5>
+                <ul style="list-style-type: none;color: white;">
+                  <li>Web Development</li>
+                  <li>Digital Marketing</li>
+                  <li>Graphic Design</li>
+                  <li>Branding</li>
+                  <li>Web Development</li>
+                  <li>Digital Marketing</li>
+                  <li>Graphic Design</li>
+                  <li>Branding</li>
+                  <li>Branding</li>
+                </ul>
+            </div>
+            <div>
+                <h5 style="color: white;">USEFUL LINKS</h5>
+                    <ul style="list-style-type:none;color: white;">
                       <li>Home</li>
                       <li>About</li>
                       <li>Services</li>
                       <li>Portfolio</li>
                       <li>Contact</li>
-
                     </ul>
-                </div>
-                <div class="col-md-3" style="color: white;">
-                    <h5>CONTACT US</h5>
-                    <ul class="list-unstyled">
-                      <li><span><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="white" class="bi bi-telephone-fill" viewBox="0 0 16 16">
-                        <path fill-rule="evenodd" d="M1.885.511a1.745 1.745 0 0 1 2.61.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.68.68 0 0 0 .178.643l2.457 2.457a.68.68 0 0 0 .644.178l2.189-.547a1.75 1.75 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.6 18.6 0 0 1-7.01-4.42 18.6 18.6 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877z"/>
-                      </svg></span>+923197134823</li>
-                      <li><span><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="white" class="bi bi-telephone-fill" viewBox="0 0 16 16">
-                        <path fill-rule="evenodd" d="M1.885.511a1.745 1.745 0 0 1 2.61.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.68.68 0 0 0 .178.643l2.457 2.457a.68.68 0 0 0 .644.178l2.189-.547a1.75 1.75 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.6 18.6 0 0 1-7.01-4.42 18.6 18.6 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877z"/>
-                      </svg></span>+923197134823</li>
-                      <li><span><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="white" class="bi bi-envelope" viewBox="0 0 16 16">
-                        <path d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2zm2-1a1 1 0 0 0-1 1v.217l7 4.2 7-4.2V4a1 1 0 0 0-1-1zm13 2.383-4.708 2.825L15 11.105zm-.034 6.876-5.64-3.471L8 9.583l-1.326-.795-5.64 3.47A1 1 0 0 0 2 13h12a1 1 0 0 0 .966-.741M1 11.105l4.708-2.897L1 5.383z"/>
-                      </svg></span>info@panacloud.com</li>
-                    </ul>
-                    <h5>FOLLOW US</h5>
-                    <ul class="list-inline footer-links">
-                        <li class="list-inline-item">
-                          <a href="#">
-                                <i class="fab fa-facebook"></i>
-                          </a>
-                          </li>
-                        <li class="list-inline-item">
-                          <a href="#">
-                                <i class="fab fa-twitter"></i>
-                          </a>
-                        </li>
-                        <li class="list-inline-item">
-                          <a href="#">
-                                <i class="fab fa-instagram"></i>
-                          </a>
-                        </li>
-                        <li class="list-inline-item">
-                          <a href="#">
-                                <i class="fab fa-linkedin"></i>
-                          </a>
-                        </li>
-                    </ul>
-                </div>
             </div>
-    </footer>
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel/slick/slick.min.js"></script>
-    <script type="text/javascript">
-        $(document).ready(function(){
-            $('.slider').slick({
-                autoplay: true,
-                autoplaySpeed: 2000,
-                dots: true,
-                arrows: true,
-                infinite: true,
-                speed: 500,
-                fade: false,
-                cssEase: 'linear'
-            });
-        });
-    </script>
-    </body>
+            <div>
+              <h5 style="color: white;">CONTACT US</h5>
+                <ul style="list-style-type:none;color: white;">
+                    <li><span><svg style="transform: scaleX(-1);" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="white" class="bi bi-telephone-fill" viewBox="0 0 16 16">
+                      <path fill-rule="evenodd" d="M1.885.511a1.745 1.745 0 0 1 2.61.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.68.68 0 0 0 .178.643l2.457 2.457a.68.68 0 0 0 .644.178l2.189-.547a1.75 1.75 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.6 18.6 0 0 1-7.01-4.42 18.6 18.6 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877z"/>
+                    </svg></span> +923197134823</li>
+                    <li><span><svg style="transform: scaleX(-1);" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="white" class="bi bi-telephone-fill" viewBox="0 0 16 16">
+                      <path fill-rule="evenodd" d="M1.885.511a1.745 1.745 0 0 1 2.61.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.68.68 0 0 0 .178.643l2.457 2.457a.68.68 0 0 0 .644.178l2.189-.547a1.75 1.75 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.6 18.6 0 0 1-7.01-4.42 18.6 18.6 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877z"/>
+                    </svg></span> +923197134823</li>
+                    <li><span><svg  xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="white" class="bi bi-envelope" viewBox="0 0 16 16">
+                      <path d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2zm2-1a1 1 0 0 0-1 1v.217l7 4.2 7-4.2V4a1 1 0 0 0-1-1zm13 2.383-4.708 2.825L15 11.105zm-.034 6.876-5.64-3.471L8 9.583l-1.326-.795-5.64 3.47A1 1 0 0 0 2 13h12a1 1 0 0 0 .966-.741M1 11.105l4.708-2.897L1 5.383z"/>
+                    </svg></span> info@panacloud.com</li>
+                  </ul>
+                  <h5>FOLLOW US</h5>
+                  <ul class="footer-links">
+                      <li>
+                        <a href="#">
+                              <i class="fab fa-facebook" style="color: black;"></i>
+                        </a>
+                        </li>
+                      <li>
+                        <a href="#">
+                              <i class="fab fa-twitter" style="color: black;"></i>
+                        </a>
+                      </li>
+                      <li>
+                        <a href="#">
+                              <i class="fab fa-instagram" style="color: black;"></i>
+                        </a>
+                      </li>
+                      <li>
+                        <a href="#">
+                              <i class="fab fa-linkedin" style="color: black;"></i>
+                        </a>
+                      </li>
+                  </ul>
+            </div>
+            
+        </div>
+        <script src="script.js"></script> 
+        <script src="app.js"></script>
+        </body>
 </html>
